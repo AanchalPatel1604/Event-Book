@@ -12,6 +12,7 @@ import EventDetails from "./pages/EventDetails";
 import SeatSelection from "./pages/SeatSelection";
 import Confirmation from "./pages/Confirmation";
 import MyBookings from "./pages/MyBookings";
+import Login from "./pages/login";
 
 import "./App.css";
 
@@ -123,8 +124,8 @@ function App() {
           <button
             className="login-button"
             onClick={() =>
-              alert("Login feature coming soon!")
-            }
+              navigate("/login")}
+            
           >
             Login
           </button>
@@ -370,7 +371,10 @@ function AppWithRouter() {
           path="/seats"
           element={<SeatSelection />}
         />
-
+<Route
+  path="/login"
+  element={<Login />}
+/>
 
         {/* CONFIRMATION */}
 
